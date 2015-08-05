@@ -29,11 +29,12 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update
      sudo apt-get install -y virtualbox-source module-assistant
-     m-a prepare
-     m-a a-i virtualbox-source
+     sudo apt-get install -y linux-headers-3.2.0-23 linux-headers-3.2.0-23-generic
+     sudo m-a -t -f -q prepare
+     sudo m-a -t -q a-i virtualbox-source
      sudo apt-get install -y virtualbox
-     wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
-     wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.6.2-1_amd64.deb
+     wget --progress=dot https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
+     wget --progress=dot https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.6.2-1_amd64.deb
      sudo dpkg -i chefdk_0.6.2-1_amd64.deb
      sudo dpkg -i vagrant_1.7.4_x86_64.deb
   SHELL
