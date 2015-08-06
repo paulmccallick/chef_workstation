@@ -4,7 +4,7 @@ This is a vagrant file that attempts to create a functioning chef workstation wi
 * Vagrant
 * Virtualbox
 
-It is a vagrant box that can create vagrant boxes.
+IOW is a vagrant box that can create vagrant boxes.
 
 ## Requirements
 * You must have vagrant and virtualbox installed on your machine.
@@ -20,4 +20,7 @@ To use the machine
 
 ## Caveats
 * Your kitchen/vagrant machines that are created on the using the workstation must be 32 bit machines.  See [this issue](https://github.com/Varying-Vagrant-Vagrants/VVV/issues/375) for more info.
-* 
+
+## Todos
+* share your home directory with the workstation so you can edit files on the host machine
+* provide instructions/tools for getting the workstation hooked up with your chef server...get knife working
